@@ -17,7 +17,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="<?php print(_APP_ROOT); ?>/app/calc.php">Home</a></li>
-							<li><a href="<?php print(_APP_ROOT); ?>/app/other.php">Inna chroniona strona</a></li>
+
 							<li><a href="<?php print(_APP_ROOT); ?>/app/security/login.php">Zaloguj</a></li>
 						</ul>
 					</nav>
@@ -43,7 +43,7 @@
 											<input type="password" name="pass" id="id_pass"  placeholder="Hasło" />
 										</div>
 										<div class="col-12">
-												<input type="submit" value="zaloguj" class=" button primary fit" />
+												<input type="submit" value="Zaloguj" class=" button primary fit" />
 										</div>
 									</div>
 								</form>
@@ -52,7 +52,7 @@
                         //wyświeltenie listy błędów, jeśli istnieją
                         if (isset($messages)) {
                             if (count ( $messages ) > 0) {
-                                echo '<ol style="padding: 10px 10px 10px 30px; border-radius: 5px; background-color: #0000ff; width:300px;">';
+                                echo '<ol style="background: #fff200; margin: 1em; margin-top: 2em; margin-right: 0em; margin-bottom: 2em; margin-left: 0em; padding: .4em 2em; border-radius: 5px; color: #000000;">';
                                 foreach ( $messages as $key => $msg ) {
                                     echo '<li>'.$msg.'</li>';
                                 }
@@ -66,7 +66,7 @@
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modified by Mateusz Ziarkiewicz</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modified by Mateusz Ziarkiewicz</li>
 					</ul>
 				</footer>
 

@@ -44,7 +44,7 @@
 											<input type="text" name="yr" id="id_yr" value="<?php out($yr ); ?>" placeholder="Liczba lat" />
 										</div>
 										<div class="col-12">
-											<input type="text" name="pct" id="id_ptc" value="<?php out($ptc ); ?>" placeholder="Oprocentowanie" />
+											<input type="text" name="pct" id="id_pct" value="<?php out($pct); ?>" placeholder="Oprocentowanie" />
 										</div>
 
 										<div class="col-12">
@@ -53,14 +53,31 @@
 									</div>
 								</form>
 							</section>
+                        <?php
+                        //wyświeltenie listy błędów, jeśli istnieją
+                        if (isset($messages)) {
+                            if (count ( $messages ) > 0) {
+                                echo '<ol style="background: #fff200; margin: 1em; margin-top: 2em; margin-right: 0em; margin-bottom: 2em; margin-left: 0em; padding: .4em 2em; border-radius: 5px; color: #000000;">';
+                                foreach ( $messages as $key => $msg ) {
+                                    echo '<li>'.$msg.'</li>';
+                                }
+                                echo '</ol>';
+                            }
+                        }
+                        ?>
 
+                        <?php if (isset($result)){ ?>
+                            <div style="background: #1fadfa; margin: 1em; margin-top: 2em; margin-right: 0em; margin-bottom: 3em; margin-left: 0em; padding: .3em 1em; border-radius: 5px; color: #fff;">
+                                <?php echo 'Miesięczna rata będzie wynosić ok. : '.number_format($result, 2,'.',''); ?>
+                            </div>
+                        <?php } ?>
 					</div>
 				</div>
 
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modified by Mateusz Ziarkiewicz</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modified by Mateusz Ziarkiewicz</li>
 					</ul>
 				</footer>
 

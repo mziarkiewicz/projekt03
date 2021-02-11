@@ -1,3 +1,9 @@
+<?php
+require_once dirname(__FILE__).'/../config.php';
+//ochrona widoku
+include _ROOT_PATH.'/app/security/check.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -12,7 +18,7 @@
 
 			<!-- Header -->
 			<header id="header">
-				<h1 id="logo"><a href="/calc.php">Prosty kalkulator kredytowy</a></h1>
+				<h1 id="logo"><a href="../app/calc.php">Prosty kalkulator kredytowy</a></h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="../app/calc.php">Home</a></li>
@@ -31,7 +37,7 @@
 						</header>
 						<pre>
 							<code>
-<p>ArrayList int list = new ArrayList<>();
+ArrayList int list = new ArrayList<>();
 Random random = new Random();
 for (int x = 0; x < 10; x ++) {
 list.add(random.nextInt(100));
@@ -52,7 +58,7 @@ System.out.print( x + " | ");
 /*Lista przed sortowaniem:
 22 | 60 | 5 | 19 | 5 | 4 | 31 | 13 | 23 | 73 |
 Lista po sortowaniu:
-4 | 5 | 5 | 13 | 19 | 22 | 23 | 31 | 60 | 73 |*/</p>
+4 | 5 | 5 | 13 | 19 | 22 | 23 | 31 | 60 | 73 |*/
 							</code>
 						</pre>
 
@@ -61,7 +67,7 @@ Lista po sortowaniu:
 			<!-- Footer -->
 				<footer id="footer">
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modified by Mateusz Ziarkiewicz</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Modified by Mateusz Ziarkiewicz</li>
 					</ul>
 				</footer>
 
